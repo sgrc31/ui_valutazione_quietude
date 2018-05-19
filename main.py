@@ -30,8 +30,18 @@ class MyWin(QDialog):
         self.player = QMediaPlayer()
 
     def lancia_pattern(self):
-        print('bella')
-        print(self.sender().text().lower())
+        associazioni_pattern = {'ambulanza': '1',
+                        'allarme': '2',
+                        'campanello': '3',
+                        'fischietto': '4',
+                        'elettrodomestico': '5',
+                        'clacson': '6'
+                        }
+        self.tipo_pattern = str.encode(associazioni_pattern[self.sender().text().lower()])
+        print(self.tipo_pattern)
+        self.ser = serial.Serial(self.comboBox.currentText())
+        self.ser.write(self.tipo_pattern)
+        self.ser.close()
 
     def lancia_suono(self):
         self.tipo_suono = self.sender().text().lower()
