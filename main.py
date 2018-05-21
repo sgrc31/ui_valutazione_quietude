@@ -58,16 +58,21 @@ class MyWin(QDialog):
                         }
         self.tipo_pattern = str.encode(associazioni_pattern[self.sender().text().lower()])
         logging.info(self.tipo_pattern)
-        #self.ser = serial.Serial(self.comboBox.currentText(), 9600)
-        #time.sleep(2)
         self.ser.write(self.tipo_pattern)
-        #self.ser.close()
+        self.tipo_suono2 = self.comboSuoni.currentText().lower()
+        self.lancia_suono2(self.tipo_suono2)
 
     def lancia_suono(self):
         self.tipo_suono = self.sender().text().lower()
         self.suono = QMediaContent(QUrl.fromLocalFile(os.path.join(self.percorso, 'sounds', '{}{}'.format(self.tipo_suono, '.mp3'))))
         self.player.setMedia(self.suono)
         self.player.play()
+
+    def lancia_suono2(self, nomesuono):
+        self.suono = QMediaContent(QUrl.fromLocalFile(os.path.join(self.percorso, 'sounds', '{}{}'.format(nomesuono, '.mp3'))))
+        self.player.setMedia(self.suono)
+        self.player.play()
+        
 
 ################
 ##  Start it  ##

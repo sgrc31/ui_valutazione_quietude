@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>416</width>
-    <height>418</height>
+    <height>407</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Sounds and Patterns</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,0,4,4">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,0,4,4,0,1">
    <item>
     <layout class="QFormLayout" name="formLayout">
      <item row="0" column="0">
@@ -175,6 +175,61 @@
       </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Suono</string>
+       </property>
+       <property name="buddy">
+        <cstring>comboSuoni</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboSuoni">
+       <item>
+        <property name="text">
+         <string>Ambulanza</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Campanello</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Allarme</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fischietto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Clacson</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Elettrodomestico</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
