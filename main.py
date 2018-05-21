@@ -59,8 +59,9 @@ class MyWin(QDialog):
         self.tipo_pattern = str.encode(associazioni_pattern[self.sender().text().lower()])
         logging.info(self.tipo_pattern)
         self.ser.write(self.tipo_pattern)
-        self.tipo_suono2 = self.comboSuoni.currentText().lower()
-        self.lancia_suono2(self.tipo_suono2)
+        if self.checkBox.checkState() == 2:
+            self.tipo_suono2 = self.comboSuoni.currentText().lower()
+            self.lancia_suono2(self.tipo_suono2)
 
     def lancia_suono(self):
         self.tipo_suono = self.sender().text().lower()
