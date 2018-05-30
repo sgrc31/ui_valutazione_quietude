@@ -103,7 +103,7 @@
       <string>Suoni</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
+      <item row="0" column="1">
        <widget class="QPushButton" name="snd_btn01">
         <property name="text">
          <string>Ambulanza</string>
@@ -116,17 +116,17 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="snd_btn03">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="snd_btn02">
         <property name="text">
-         <string>Campanello</string>
+         <string>Allarme</string>
         </property>
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QPushButton" name="snd_btn02">
+       <widget class="QPushButton" name="snd_btn05">
         <property name="text">
-         <string>Allarme</string>
+         <string>Elettrodomestico</string>
         </property>
        </widget>
       </item>
@@ -138,16 +138,16 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="snd_btn06">
+       <widget class="QPushButton" name="snd_btn03">
         <property name="text">
-         <string>Clacson</string>
+         <string>Campanello</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="snd_btn05">
+       <widget class="QPushButton" name="snd_btn06">
         <property name="text">
-         <string>Elettrodomestico</string>
+         <string>Clacson</string>
         </property>
        </widget>
       </item>
@@ -161,23 +161,23 @@
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
+       <widget class="QPushButton" name="pattern_btn02">
+        <property name="text">
+         <string>Allarme</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
        <widget class="QPushButton" name="pattern_btn01">
         <property name="text">
          <string>Ambulanza</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="pattern_btn03">
-        <property name="text">
-         <string>Campanello</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="2">
-       <widget class="QPushButton" name="pattern_btn02">
+       <widget class="QPushButton" name="pattern_btn05">
         <property name="text">
-         <string>Allarme</string>
+         <string>Elettrodomestico</string>
         </property>
        </widget>
       </item>
@@ -189,16 +189,16 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="pattern_btn06">
+       <widget class="QPushButton" name="pattern_btn03">
         <property name="text">
-         <string>Clacson</string>
+         <string>Campanello</string>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="pattern_btn05">
+       <widget class="QPushButton" name="pattern_btn06">
         <property name="text">
-         <string>Elettrodomestico</string>
+         <string>Clacson</string>
         </property>
        </widget>
       </item>
@@ -221,17 +221,17 @@
       <widget class="QComboBox" name="comboSuoni">
        <item>
         <property name="text">
+         <string>Allarme</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>Ambulanza</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Campanello</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Allarme</string>
+         <string>Elettrodomestico</string>
         </property>
        </item>
        <item>
@@ -241,12 +241,12 @@
        </item>
        <item>
         <property name="text">
-         <string>Clacson</string>
+         <string>Campanello</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Elettrodomestico</string>
+         <string>Clacson</string>
         </property>
        </item>
       </widget>
@@ -270,8 +270,97 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
+     <widget class="QWidget" name="tab03">
+      <attribute name="title">
+       <string>Allarme</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_alte_3">
+         <property name="text">
+          <string>Alte</string>
+         </property>
+         <property name="buddy">
+          <cstring>slider_alte</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSlider" name="slider_alte_3">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+         <property name="sliderPosition">
+          <number>250</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="spinBox_alte_3">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_basse_3">
+         <property name="text">
+          <string>Basse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSlider" name="slider_basse_3">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="spinBox_basse_3">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>50</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="tab01">
       <attribute name="title">
        <string>Ambulanza</string>
@@ -358,13 +447,13 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab02">
+     <widget class="QWidget" name="tab06">
       <attribute name="title">
-       <string>Campanello</string>
+       <string>Elettrodomestico</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_4">
+      <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_alte_2">
+        <widget class="QLabel" name="label_alte_6">
          <property name="text">
           <string>Alte</string>
          </property>
@@ -374,7 +463,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <spacer name="horizontalSpacer_9">
+        <spacer name="horizontalSpacer_13">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -390,12 +479,12 @@
         </spacer>
        </item>
        <item row="0" column="2">
-        <widget class="QSlider" name="slider_alte_2">
+        <widget class="QSlider" name="slider_alte_6">
          <property name="maximum">
           <number>250</number>
          </property>
          <property name="value">
-          <number>250</number>
+          <number>200</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -403,131 +492,12 @@
         </widget>
        </item>
        <item row="0" column="3">
-        <widget class="QSpinBox" name="spinBox_alte_2">
+        <widget class="QSpinBox" name="spinBox_alte_6">
          <property name="maximum">
           <number>250</number>
          </property>
          <property name="value">
-          <number>250</number>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_basse_2">
-         <property name="text">
-          <string>Basse</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSlider" name="slider_basse_2">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>60</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QSpinBox" name="spinBox_basse_2">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>60</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab03">
-      <attribute name="title">
-       <string>Allarme</string>
-      </attribute>
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_alte_3">
-         <property name="text">
-          <string>Alte</string>
-         </property>
-         <property name="buddy">
-          <cstring>slider_alte</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <spacer name="horizontalSpacer_10">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Minimum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="2">
-        <widget class="QSlider" name="slider_alte_3">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>250</number>
-         </property>
-         <property name="sliderPosition">
-          <number>250</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QSpinBox" name="spinBox_alte_3">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>250</number>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_basse_3">
-         <property name="text">
-          <string>Basse</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSlider" name="slider_basse_3">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>50</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QSpinBox" name="spinBox_basse_3">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>50</number>
+          <number>200</number>
          </property>
         </widget>
        </item>
@@ -619,6 +589,92 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tab02">
+      <attribute name="title">
+       <string>Campanello</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_alte_2">
+         <property name="text">
+          <string>Alte</string>
+         </property>
+         <property name="buddy">
+          <cstring>slider_alte</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSlider" name="slider_alte_2">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="spinBox_alte_2">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>250</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_basse_2">
+         <property name="text">
+          <string>Basse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSlider" name="slider_basse_2">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="spinBox_basse_2">
+         <property name="maximum">
+          <number>250</number>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="tab05">
       <attribute name="title">
        <string>Clacson</string>
@@ -670,62 +726,6 @@
          </property>
          <property name="value">
           <number>250</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="tab06">
-      <attribute name="title">
-       <string>Elettrodomestico</string>
-      </attribute>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_alte_6">
-         <property name="text">
-          <string>Alte</string>
-         </property>
-         <property name="buddy">
-          <cstring>slider_alte</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <spacer name="horizontalSpacer_13">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Minimum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="2">
-        <widget class="QSlider" name="slider_alte_6">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>200</number>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QSpinBox" name="spinBox_alte_6">
-         <property name="maximum">
-          <number>250</number>
-         </property>
-         <property name="value">
-          <number>200</number>
          </property>
         </widget>
        </item>
